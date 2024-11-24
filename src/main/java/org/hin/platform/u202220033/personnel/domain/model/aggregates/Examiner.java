@@ -4,6 +4,7 @@ import jakarta.persistence.CascadeType;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
+import lombok.Getter;
 import lombok.NonNull;
 import org.hin.platform.u202220033.assessment.domain.model.aggregates.MentalStateExam;
 import org.hin.platform.u202220033.personnel.domain.model.commands.CreateExaminerCommand;
@@ -13,6 +14,7 @@ import org.hin.platform.u202220033.shared.domain.model.aggregates.AuditableAbstr
 import java.util.List;
 import java.util.UUID;
 
+@Getter
 @Entity
 public class Examiner extends AuditableAbstractAggregateRoot<Examiner> {
     @NonNull
